@@ -3,12 +3,12 @@ import { resolve } from "node:path";
 
 import type { HeadConfig, PageData, TransformContext } from "vitepress";
 
-const SITE_NAME = "WorkBuddy 实战蓝皮书";
-const SITE_ALTERNATE_NAME = "WorkBuddy Guide";
-const ORGANIZATION_NAME = "WorkBuddy Guide Contributors";
-const GITHUB_URL = "https://github.com/AlephAITech/WorkBuddyGuide";
+const SITE_NAME = "教师 AI 实践课";
+const SITE_ALTERNATE_NAME = "Teacher AI Practice";
+const ORGANIZATION_NAME = "ChenNing-tech";
+const GITHUB_URL = "https://github.com/ChenNing-tech/WorkBuddyGuide";
 const DEFAULT_DESCRIPTION =
-  "从安装使用到 AI 工作系统：27 章 WorkBuddy 实战指南与团队落地方法。";
+  "面向教师的 AI 工具学习、办公实践、教学应用与培训资源平台。";
 
 function cleanPagePath(page: string): string {
   if (page === "index.md") return "/";
@@ -135,6 +135,7 @@ function breadcrumbName(segment: string): string {
 
   const labels: Record<string, string> = {
     bluebook: "WorkBuddy 实战蓝皮书",
+    training: "教师 AI 培训专区",
     cases: "社区案例集",
     community: "社区共创",
     help: "帮你解决",
@@ -219,7 +220,7 @@ export function createSeoHead(
   }
 
   const canonicalUrl = absolutePageUrl(siteUrl, page);
-  const socialImageUrl = new URL("/og/workbuddy-guide.png", `${siteUrl}/`).href;
+  const socialImageUrl = new URL("/og/teacher-ai-practice.png", `${siteUrl}/`).href;
   const description = pageData.description
     ? truncateDescription(pageData.description)
     : extractDescription(
@@ -308,12 +309,12 @@ export function createSeoHead(
     ["meta", { property: "og:image:type", content: "image/png" }],
     ["meta", { property: "og:image:width", content: "1280" }],
     ["meta", { property: "og:image:height", content: "720" }],
-    ["meta", { property: "og:image:alt", content: "WorkBuddy 实战蓝皮书首页预览" }],
+    ["meta", { property: "og:image:alt", content: "教师 AI 实践课首页预览" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:title", content: title }],
     ["meta", { name: "twitter:description", content: description }],
     ["meta", { name: "twitter:image", content: socialImageUrl }],
-    ["meta", { name: "twitter:image:alt", content: "WorkBuddy 实战蓝皮书首页预览" }],
+    ["meta", { name: "twitter:image:alt", content: "教师 AI 实践课首页预览" }],
     [
       "script",
       { type: "application/ld+json" },

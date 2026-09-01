@@ -136,8 +136,26 @@ const casesSidebar: DefaultTheme.SidebarItem[] = [
   },
 ];
 
+const trainingSidebar: DefaultTheme.SidebarItem[] = [
+  { text: "培训首页", link: "/training/" },
+  {
+    text: "教师 AI 培训",
+    collapsed: false,
+    items: [
+      { text: "课前准备", link: "/training/01-before-class" },
+      { text: "AI 基础能力", link: "/training/02-basic-skills" },
+      { text: "办公三件套实践", link: "/training/03-office-practice" },
+      { text: "教学实践案例", link: "/training/04-teaching-cases" },
+      { text: "安全与使用边界", link: "/training/safety" },
+      { text: "培训资源", link: "/training/resources" },
+      { text: "常见问题", link: "/training/faq" },
+    ],
+  },
+];
+
 export const siteSidebar: DefaultTheme.Sidebar = {
   ...bluebookSidebar,
+  "/training/": trainingSidebar,
   "/cases/": casesSidebar,
   "/community/case-contributing": casesSidebar,
 };

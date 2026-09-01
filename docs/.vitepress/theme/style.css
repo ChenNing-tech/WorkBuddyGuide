@@ -4,7 +4,7 @@
   --wb-acid-soft: #eef7bd;
   --wb-ink: #11130e;
   --wb-paper: #f5f7f0;
-  --wb-surface: #ffffff;
+  --wb-surface: #fbfcf8;
   --wb-muted: #656b60;
   --wb-line: #d7dbd0;
   --wb-pixel: "Silkscreen", monospace;
@@ -86,6 +86,16 @@ body {
   background: var(--wb-paper);
 }
 
+body::before {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 ::selection {
   color: #0c0d0a;
   background: var(--wb-acid);
@@ -94,6 +104,12 @@ body {
 a,
 button {
   -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--wb-ink);
+  outline-offset: 4px;
 }
 
 /* Global navigation */
@@ -224,11 +240,11 @@ button {
   color: #0d0f0a;
   font-size: clamp(56px, 5.4vw, 82px);
   font-weight: 850;
-  line-height: 1.06;
+  line-height: 0.95;
   letter-spacing: -0.07em;
 }
 
-.wb-hero__copy .wb-hero__title--bluebook {
+.wb-hero__copy .wb-hero__title--training {
   font-size: clamp(52px, 4.7vw, 70px);
   letter-spacing: -0.06em;
   white-space: nowrap;
@@ -274,7 +290,7 @@ button {
 }
 
 .wb-button--primary {
-  color: #fff !important;
+  color: #fbfcf8 !important;
   background: #0d0f0a;
 }
 
@@ -308,7 +324,7 @@ button {
   place-items: center;
   border: 1px solid rgba(17, 19, 14, 0.13);
   color: #0b0d09;
-  background: #fff;
+  background: #fbfcf8;
   box-shadow: 0 10px 25px rgba(31, 38, 10, 0.08);
 }
 
@@ -365,7 +381,7 @@ button {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   min-height: 104px;
   padding: 20px 34px;
-  color: #fff;
+  color: #fbfcf8;
   background: #0c0e09;
 }
 
@@ -403,91 +419,6 @@ button {
   color: var(--wb-acid);
   font-family: var(--wb-pixel);
   font-size: 11px;
-}
-
-.wb-traffic {
-  display: flex;
-  width: min(1040px, calc(100% - 96px));
-  min-height: 58px;
-  margin: 22px auto 0;
-  border: 2px solid #11130e;
-  border-radius: 7px;
-  color: #11130e;
-  background: var(--wb-surface);
-  box-shadow: 0 3px 0 #11130e;
-}
-
-.wb-traffic__live {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  min-width: 142px;
-  padding: 0 24px;
-  font-family: var(--wb-pixel);
-  font-size: 14px;
-  letter-spacing: 0.04em;
-}
-
-.wb-traffic__dot {
-  width: 18px;
-  height: 18px;
-  border: 1.5px solid #11130e;
-  border-radius: 50%;
-  background: var(--wb-acid);
-  box-shadow: inset 0 0 0 3px var(--wb-surface);
-}
-
-.wb-traffic--error .wb-traffic__dot {
-  background: #a5a79f;
-}
-
-.wb-traffic__metrics {
-  display: grid;
-  flex: 1;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 0;
-}
-
-.wb-traffic__metrics > div {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-content: center;
-  align-items: baseline;
-  justify-content: center;
-  gap: 0 12px;
-  min-width: 0;
-  margin: 10px 0;
-  padding: 0 20px;
-  border-left: 1px solid #11130e;
-}
-
-.wb-traffic__metrics dt {
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.wb-traffic__metrics dd {
-  min-width: 7ch;
-  margin: 0;
-  font-family: var(--wb-pixel);
-  font-size: 17px;
-  line-height: 1;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.wb-traffic__metrics small {
-  grid-column: 1 / -1;
-  color: #557b18;
-  font-family: var(--wb-pixel);
-  font-size: 8px;
-  letter-spacing: 0.06em;
-}
-
-.wb-traffic--loading .wb-traffic__metrics dd {
-  color: var(--wb-muted);
 }
 
 .wb-section {
@@ -661,7 +592,7 @@ button {
   gap: 60px;
   margin-top: 72px;
   padding: 56px;
-  color: #fff;
+  color: #fbfcf8;
   background: #0c0e09;
 }
 
@@ -758,7 +689,7 @@ button {
 }
 
 .wb-button--acid {
-  color: #fff !important;
+  color: #fbfcf8 !important;
   background: #11130e;
 }
 
@@ -839,7 +770,7 @@ button {
   border: 1px solid var(--wb-line);
   border-radius: 4px;
   color: var(--wb-ink);
-  background: #fff;
+  background: #fbfcf8;
   text-decoration: none;
   transition: border-color 140ms ease, box-shadow 140ms ease,
     transform 140ms ease;
@@ -859,7 +790,7 @@ button {
   border: 0;
   border-radius: 2px;
   object-fit: contain;
-  background: #fff;
+  background: #fbfcf8;
 }
 
 .wb-contact-card span {
@@ -896,7 +827,7 @@ button {
   font-size: 10px;
   font-weight: 400;
   letter-spacing: 0;
-  content: "WORKBUDDY BLUEBOOK";
+  content: "TEACHER AI PRACTICE";
 }
 
 .vp-doc > h1:first-child::after,
@@ -1052,7 +983,7 @@ body.wb-lightbox-open {
 
 .vp-doc th {
   border-color: #33382f;
-  color: #fff;
+  color: #fbfcf8;
   background: #151812;
 }
 
@@ -1161,7 +1092,7 @@ body.wb-lightbox-open {
     font-size: clamp(54px, 9vw, 72px);
   }
 
-  .wb-hero__copy .wb-hero__title--bluebook {
+  .wb-hero__copy .wb-hero__title--training {
     font-size: clamp(48px, 8vw, 64px);
   }
 
@@ -1188,29 +1119,6 @@ body.wb-lightbox-open {
 
   .wb-value-strip__item:nth-child(2) {
     border-right: 0;
-  }
-
-  .wb-traffic {
-    width: calc(100% - 48px);
-  }
-
-  .wb-traffic__live {
-    min-width: 118px;
-    padding-inline: 18px;
-  }
-
-  .wb-traffic__metrics > div {
-    gap: 0 8px;
-    padding-inline: 12px;
-  }
-
-  .wb-traffic__metrics dt {
-    font-size: 12px;
-  }
-
-  .wb-traffic__metrics dd {
-    min-width: 0;
-    font-size: 14px;
   }
 
   .wb-system {
@@ -1246,10 +1154,10 @@ body.wb-lightbox-open {
   .wb-hero__copy h1 {
     margin-top: 18px;
     font-size: clamp(36px, 10.8vw, 48px);
-    line-height: 1.06;
+    line-height: 0.95;
   }
 
-  .wb-hero__copy .wb-hero__title--bluebook {
+  .wb-hero__copy .wb-hero__title--training {
     font-size: clamp(31px, 8.5vw, 36px);
   }
 
@@ -1337,44 +1245,6 @@ body.wb-lightbox-open {
 
   .wb-value-strip__item:last-child {
     border-bottom: 0;
-  }
-
-  .wb-traffic {
-    display: block;
-    width: 100%;
-    margin-top: 14px;
-  }
-
-  .wb-traffic__live {
-    min-height: 46px;
-    border-bottom: 1px solid #11130e;
-  }
-
-  .wb-traffic__metrics {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .wb-traffic__metrics > div {
-    min-height: 58px;
-    margin: 0;
-    padding: 10px 12px;
-    border-bottom: 1px solid #11130e;
-  }
-
-  .wb-traffic__metrics > div:nth-child(odd) {
-    border-left: 0;
-  }
-
-  .wb-traffic__metrics > div:nth-last-child(-n + 2) {
-    border-bottom: 0;
-  }
-
-  .wb-traffic__metrics dt {
-    font-size: 13px;
-  }
-
-  .wb-traffic__metrics dd {
-    font-size: 14px;
   }
 
   .wb-section {

@@ -1,8 +1,8 @@
 ---
 layout: home
-title: WorkBuddy 教程与使用指南｜WorkBuddy 实战蓝皮书
+title: 教师 AI 实践课｜教师 AI 培训与教学应用
 titleTemplate: false
-description: 系统的 WorkBuddy 中文教程与使用指南，涵盖安装入门、真实案例、Skills、连接器、自动化和多智能体实践。
+description: 面向教师的 AI 工具培训与教学实践平台，涵盖课前准备、提示词、办公三件套、教学案例和安全边界。
 ---
 
 <HomePage />

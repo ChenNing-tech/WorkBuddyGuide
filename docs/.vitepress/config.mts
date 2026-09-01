@@ -4,13 +4,14 @@ import { siteSidebar } from "./sidebar";
 import { configureMermaidMarkdown } from "./mermaid-markdown";
 import { createPageDescription, createSeoHead } from "./seo";
 
-const siteUrl = process.env.VITEPRESS_SITE_URL || "https://workbuddy.homes";
+const siteUrl =
+  process.env.VITEPRESS_SITE_URL || "https://teacher-ai-practice.pages.dev";
 
 export default defineConfig({
     lang: "zh-CN",
-    title: "WorkBuddy 实战蓝皮书",
-    titleTemplate: ":title · WorkBuddy 实战蓝皮书",
-    description: "从安装使用到 AI 工作系统：27 章 WorkBuddy 实战指南与团队落地方法。",
+    title: "教师 AI 实践课",
+    titleTemplate: ":title · 教师 AI 实践课",
+    description: "面向教师的 AI 工具学习、办公实践、教学应用与培训资源平台。",
     cleanUrls: true,
     lastUpdated: true,
     srcExclude: ["**/source.md", "plans/**"],
@@ -31,20 +32,13 @@ export default defineConfig({
     head: [
       ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
       ["meta", { name: "theme-color", content: "#d8f238" }],
-      ["meta", { name: "author", content: "WorkBuddy Guide Contributors" }],
-      [
-        "meta",
-        {
-          name: "baidu-site-verification",
-          content: "codeva-RF1ZqL4g90",
-        },
-      ],
+      ["meta", { name: "author", content: "ChenNing-tech" }],
       [
         "meta",
         {
           name: "keywords",
           content:
-            "WorkBuddy,WorkBuddy 教程,AI Agent,AI 工作系统,Skills,MCP,自动化,多智能体,职场 AI",
+            "教师 AI 培训,AI 教学,教师数字素养,AI 办公,Word,Excel,PPT,提示词,教学案例",
         },
       ],
     ],
@@ -59,21 +53,17 @@ export default defineConfig({
       },
     },
     themeConfig: {
-      siteTitle: "WorkBuddy Guide",
+      siteTitle: "教师 AI 实践课",
       nav: [
         { text: "首页", link: "/" },
-        { text: "开始阅读", link: "/bluebook/" },
-        { text: "案例集", link: "/cases/" },
-        { text: "帮你解决", link: "/help/" },
+        { text: "培训专区", link: "/training/" },
+        { text: "学习手册", link: "/bluebook/" },
+        { text: "实践案例", link: "/cases/" },
         { text: "阅读指南", link: "/reading-guide" },
-        {
-          text: "交流群",
-          items: [{ component: "GroupQrMenu" }],
-        },
       ],
       sidebar: siteSidebar,
       socialLinks: [
-        { icon: "github", link: "https://github.com/AlephAITech/WorkBuddyGuide" },
+        { icon: "github", link: "https://github.com/ChenNing-tech/WorkBuddyGuide" },
       ],
       search: {
         provider: "local",
@@ -94,13 +84,13 @@ export default defineConfig({
         },
       },
       editLink: {
-        pattern: "https://github.com/AlephAITech/WorkBuddyGuide/edit/main/docs/:path",
+        pattern: "https://github.com/ChenNing-tech/WorkBuddyGuide/edit/main/docs/:path",
         text: "在 GitHub 上改进此页",
       },
       footer: {
         message:
-          '以真实任务为主线的 WorkBuddy 社区实战读本 · Pixel icons by <a href="https://pixeliconlibrary.com/" target="_blank" rel="noreferrer">HackerNoon</a>',
-        copyright: "Copyright © 2026 WorkBuddy Guide Contributors",
+          '面向教师的 AI 学习、实践与培训资源站 · Pixel icons by <a href="https://pixeliconlibrary.com/" target="_blank" rel="noreferrer">HackerNoon</a>',
+        copyright: "Copyright © 2026 ChenNing-tech",
       },
     },
   });

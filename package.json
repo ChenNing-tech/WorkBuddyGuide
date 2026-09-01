@@ -1,9 +1,9 @@
 {
-  "name": "workbuddy-guide",
+  "name": "teacher-ai-practice",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "WorkBuddy 实战蓝皮书：从安装使用到 AI 工作系统",
+  "description": "面向教师的 AI 学习、办公实践与教学培训资源站",
   "engines": {
     "node": ">=20 <25"
   },

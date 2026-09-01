@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="WorkBuddy Guide">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="教师 AI 实践课">
   <rect width="64" height="64" rx="8" fill="#d8f238"/>
   <path fill="#11130e" d="M8 8h48v48H8z"/>
-  <path fill="#d8f238" d="M14 15h7v23h7V22h7v16h7V15h7v30h-7v6H14z"/>
-  <path fill="#fff" d="M21 44h14v7H21z"/>
+  <path fill="#d8f238" d="M14 20h6v-6h12v6h6v30h-6V36H20v14h-6zm6 0v10h12V20z"/>
+  <path fill="#fbfcf8" d="M43 14h7v36h-7z"/>
 </svg>
