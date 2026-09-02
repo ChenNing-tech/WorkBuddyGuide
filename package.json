@@ -1,9 +1,9 @@
 {
-  "name": "teacher-ai-practice",
+  "name": "ai-learning-hub",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "面向教师的 AI 学习、办公实践与教学培训资源站",
+  "description": "以 WorkBuddy 为入口的 AI 学习与资源共享平台",
   "engines": {
     "node": ">=20 <25"
   },

@@ -1,0 +1,66 @@
+/* Hallmark · genre: modern-minimal · macrostructure: resource-workbench · theme: custom AI Hub · enrichment: typographic · nav: VitePress edge rail · footer: Ft2 */
+/* Hallmark pre-emit score — composition: 2 · typography: 2 · colour: 2 · motion: 2 · total: 8/8 */
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V5 · contrast: pass (40–41) · mobile: pass (34, 49, 50–57) */
+:root {
+  --color-paper: oklch(98% 0.004 250);
+  --color-paper-2: oklch(96.5% 0.007 250);
+  --color-surface: oklch(100% 0 0);
+  --color-ink: oklch(22% 0.015 255);
+  --color-ink-2: oklch(43% 0.022 252);
+  --color-muted: oklch(55% 0.018 252);
+  --color-rule: oklch(91.5% 0.008 255);
+  --color-rule-strong: oklch(83% 0.018 252);
+  --color-brand: oklch(35.5% 0.085 250);
+  --color-brand-strong: oklch(29% 0.075 250);
+  --color-accent: oklch(94% 0.22 118);
+  --color-accent-soft: oklch(97% 0.085 118);
+  --color-focus: oklch(52% 0.16 250);
+  --color-accent-ink: var(--color-ink);
+  --color-on-brand-rule: oklch(100% 0 0 / 0.25);
+  --color-on-brand-muted: oklch(100% 0 0 / 0.72);
+  --shadow-whisper: 0 1px 2px oklch(22% 0.015 255 / 0.05);
+
+  --font-display: "Alibaba PuHuiTi 3", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-outlier: "Silkscreen", "JetBrains Mono", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.953rem;
+  --text-2xl: 2.441rem;
+  --text-display: clamp(2.65rem, 4.4vw + 0.7rem, 5.15rem);
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --rule: 1px;
+  --page-gutter: clamp(1rem, 4vw, 4rem);
+  --content-max: 78rem;
+
+  --dur-short: 140ms;
+  --dur-medium: 260ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}

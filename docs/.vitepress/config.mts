@@ -9,9 +9,9 @@ const siteUrl =
 
 export default defineConfig({
     lang: "zh-CN",
-    title: "教师 AI 实践课",
-    titleTemplate: ":title · 教师 AI 实践课",
-    description: "面向教师的 AI 工具学习、办公实践、教学应用与培训资源平台。",
+    title: "AI学习Hub",
+    titleTemplate: ":title · AI学习Hub",
+    description: "以 WorkBuddy 为入口的 AI 学习、工具获取、工作台搭建与资源共享平台。",
     cleanUrls: true,
     lastUpdated: true,
     srcExclude: ["**/source.md", "plans/**"],
@@ -31,14 +31,14 @@ export default defineConfig({
     transformHead: (context) => createSeoHead(siteUrl, context),
     head: [
       ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
-      ["meta", { name: "theme-color", content: "#d8f238" }],
+      ["meta", { name: "theme-color", content: "#163A63" }],
       ["meta", { name: "author", content: "ChenNing-tech" }],
       [
         "meta",
         {
           name: "keywords",
           content:
-            "教师 AI 培训,AI 教学,教师数字素养,AI 办公,Word,Excel,PPT,提示词,教学案例",
+            "AI学习Hub,WorkBuddy,教师助手,个人工作台,Skill技能,提示词,AI Agent,实践案例",
         },
       ],
     ],
@@ -53,13 +53,16 @@ export default defineConfig({
       },
     },
     themeConfig: {
-      siteTitle: "教师 AI 实践课",
+      siteTitle: "AI学习Hub",
       nav: [
         { text: "首页", link: "/" },
-        { text: "培训专区", link: "/training/" },
-        { text: "学习手册", link: "/bluebook/" },
+        { text: "WorkBuddy手册", link: "/bluebook/" },
+        { text: "教师助手", link: "/teacher-assistant/" },
+        { text: "工作台搭建", link: "/workbench/" },
+        { text: "Skill技能", link: "/skills/" },
+        { text: "提示词库", link: "/prompts/" },
         { text: "实践案例", link: "/cases/" },
-        { text: "阅读指南", link: "/reading-guide" },
+        { text: "下载教师助手", link: "/teacher-assistant/#download" },
       ],
       sidebar: siteSidebar,
       socialLinks: [
@@ -89,7 +92,7 @@ export default defineConfig({
       },
       footer: {
         message:
-          '面向教师的 AI 学习、实践与培训资源站 · Pixel icons by <a href="https://pixeliconlibrary.com/" target="_blank" rel="noreferrer">HackerNoon</a>',
+          '学习 · 获取 · 搭建 · 复用 · 分享 · Pixel icons by <a href="https://pixeliconlibrary.com/" target="_blank" rel="noreferrer">HackerNoon</a>',
         copyright: "Copyright © 2026 ChenNing-tech",
       },
     },

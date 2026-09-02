@@ -1,0 +1,10 @@
+{
+  "project": "AI学习Hub",
+  "genre": "modern-minimal",
+  "macrostructure": "resource-workbench",
+  "theme": "custom",
+  "anchorColor": "#163A63",
+  "signalColor": "#D9FF32",
+  "centralMove": "四张轻旋转功能卡组成可进入的学习地图，WorkBuddy 入口连接完整手册",
+  "preserveRoutes": ["/bluebook/", "/cases/", "/training/"]
+}

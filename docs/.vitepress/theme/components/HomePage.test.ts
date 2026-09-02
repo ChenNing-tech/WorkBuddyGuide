@@ -3,14 +3,16 @@ import { describe, expect, it } from "vitest";
 
 import HomePage from "./HomePage.vue";
 
-describe("HomePage training experience", () => {
-  it("leads teachers into the training path", () => {
+describe("AI Learning Hub home", () => {
+  it("exposes the platform entry points", () => {
     const wrapper = mount(HomePage);
 
-    expect(wrapper.get("h1").text()).toBe("教师AI实践课");
-    expect(wrapper.get('a[href="/training/"]').text()).toContain("进入培训专区");
-    expect(wrapper.find('a[href="/training/01-before-class"]').exists()).toBe(true);
-    expect(wrapper.find('a[href="/training/04-teaching-cases"]').exists()).toBe(true);
+    expect(wrapper.get("h1").text()).toBe("从使用AI，到创造自己的AI工具");
+    expect(wrapper.get('a[href="/bluebook/"]').text()).toContain("从WorkBuddy开始");
+    expect(wrapper.find('a[href="/teacher-assistant/#download"]').exists()).toBe(true);
+    expect(wrapper.find('a[href="/skills/"]').exists()).toBe(true);
+    expect(wrapper.find('a[href="/prompts/"]').exists()).toBe(true);
+    expect(wrapper.find('a[href="/cases/"]').exists()).toBe(true);
     expect(wrapper.find(".wb-traffic").exists()).toBe(false);
   });
 });

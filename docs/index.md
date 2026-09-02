@@ -1,8 +1,8 @@
 ---
 layout: home
-title: 教师 AI 实践课｜教师 AI 培训与教学应用
+title: AI学习Hub｜学习、搭建与分享 AI 工具
 titleTemplate: false
-description: 面向教师的 AI 工具培训与教学实践平台，涵盖课前准备、提示词、办公三件套、教学案例和安全边界。
+description: 以 WorkBuddy 为入口，汇集教师助手、个人工作台、Skill、提示词和实践案例的 AI 学习与资源共享平台。
 ---
 
 <HomePage />

@@ -3,12 +3,12 @@ import { resolve } from "node:path";
 
 import type { HeadConfig, PageData, TransformContext } from "vitepress";
 
-const SITE_NAME = "教师 AI 实践课";
-const SITE_ALTERNATE_NAME = "Teacher AI Practice";
+const SITE_NAME = "AI学习Hub";
+const SITE_ALTERNATE_NAME = "AI Learning Hub";
 const ORGANIZATION_NAME = "ChenNing-tech";
 const GITHUB_URL = "https://github.com/ChenNing-tech/WorkBuddyGuide";
 const DEFAULT_DESCRIPTION =
-  "面向教师的 AI 工具学习、办公实践、教学应用与培训资源平台。";
+  "以 WorkBuddy 为入口，汇集教师助手、个人工作台、Skill、提示词和实践案例的 AI 学习与资源共享平台。";
 
 function cleanPagePath(page: string): string {
   if (page === "index.md") return "/";
@@ -135,7 +135,12 @@ function breadcrumbName(segment: string): string {
 
   const labels: Record<string, string> = {
     bluebook: "WorkBuddy 实战蓝皮书",
-    training: "教师 AI 培训专区",
+    training: "教师应用资料",
+    workbuddy: "WorkBuddy",
+    "teacher-assistant": "教师助手",
+    workbench: "工作台搭建",
+    skills: "Skill 技能",
+    prompts: "提示词库",
     cases: "社区案例集",
     community: "社区共创",
     help: "帮你解决",
@@ -309,12 +314,12 @@ export function createSeoHead(
     ["meta", { property: "og:image:type", content: "image/png" }],
     ["meta", { property: "og:image:width", content: "1280" }],
     ["meta", { property: "og:image:height", content: "720" }],
-    ["meta", { property: "og:image:alt", content: "教师 AI 实践课首页预览" }],
+    ["meta", { property: "og:image:alt", content: "AI 学习 Hub 首页预览" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:title", content: title }],
     ["meta", { name: "twitter:description", content: description }],
     ["meta", { name: "twitter:image", content: socialImageUrl }],
-    ["meta", { name: "twitter:image:alt", content: "教师 AI 实践课首页预览" }],
+    ["meta", { name: "twitter:image:alt", content: "AI 学习 Hub 首页预览" }],
     [
       "script",
       { type: "application/ld+json" },

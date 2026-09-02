@@ -1,0 +1,14 @@
+{
+  "runs": [
+    {
+      "date": "2026-09-02",
+      "action": "redesign",
+      "project": "AI学习Hub",
+      "genre": "modern-minimal",
+      "macrostructure": "resource-workbench",
+      "theme": "custom",
+      "status": "complete",
+      "verification": "23 tests passed; VitePress build passed; desktop and 320/375/414/768 responsive checks passed"
+    }
+  ]
+}

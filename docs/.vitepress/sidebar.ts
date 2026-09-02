@@ -137,24 +137,86 @@ const casesSidebar: DefaultTheme.SidebarItem[] = [
 ];
 
 const trainingSidebar: DefaultTheme.SidebarItem[] = [
-  { text: "培训首页", link: "/training/" },
+  { text: "教师应用资料", link: "/training/" },
   {
-    text: "教师 AI 培训",
+    text: "学习与实践",
     collapsed: false,
     items: [
-      { text: "课前准备", link: "/training/01-before-class" },
+      { text: "使用前准备", link: "/training/01-before-class" },
       { text: "AI 基础能力", link: "/training/02-basic-skills" },
-      { text: "办公三件套实践", link: "/training/03-office-practice" },
-      { text: "教学实践案例", link: "/training/04-teaching-cases" },
+      { text: "办公应用", link: "/training/03-office-practice" },
+      { text: "教学案例", link: "/training/04-teaching-cases" },
       { text: "安全与使用边界", link: "/training/safety" },
-      { text: "培训资源", link: "/training/resources" },
+      { text: "可复用资源", link: "/training/resources" },
       { text: "常见问题", link: "/training/faq" },
+    ],
+  },
+];
+
+const hubSidebar = (
+  title: string,
+  root: string,
+): DefaultTheme.SidebarItem[] => [
+  { text: title, link: root },
+  {
+    text: "继续探索",
+    collapsed: false,
+    items: [
+      { text: "WorkBuddy 手册", link: "/bluebook/" },
+      { text: "教师助手", link: "/teacher-assistant/" },
+      { text: "工作台搭建", link: "/workbench/" },
+      { text: "Skill 技能", link: "/skills/" },
+      { text: "提示词库", link: "/prompts/" },
+      { text: "实践案例", link: "/cases/" },
+    ],
+  },
+];
+
+const teacherAssistantSidebar: DefaultTheme.SidebarItem[] = [
+  { text: "教师助手首页", link: "/teacher-assistant/" },
+  {
+    text: "教师工作管理助手使用教程",
+    collapsed: false,
+    items: [
+      { text: "1. 安装与首次启动", link: "/teacher-assistant/01-installation" },
+      { text: "2. 首页与通用操作", link: "/teacher-assistant/02-home-and-common" },
+      { text: "3. 工作事务", link: "/teacher-assistant/03-work-affairs" },
+      { text: "4. 个人效率", link: "/teacher-assistant/04-personal-efficiency" },
+      { text: "5. 教学中心", link: "/teacher-assistant/05-teaching-center" },
+      { text: "6. 成长与科研", link: "/teacher-assistant/06-growth-research" },
+      { text: "7. 资源中心", link: "/teacher-assistant/07-resources" },
+      { text: "8. AI 功能与设置", link: "/teacher-assistant/08-ai-settings" },
+      { text: "9. 备份、恢复与迁移", link: "/teacher-assistant/09-backup-migration" },
+      { text: "10. 常见问题", link: "/teacher-assistant/10-troubleshooting" },
+    ],
+  },
+  {
+    text: "API 申请教程",
+    collapsed: false,
+    items: [
+      { text: "DeepSeek API 创建与接入", link: "/teacher-assistant/api/deepseek-api" },
+    ],
+  },
+  {
+    text: "继续探索",
+    collapsed: true,
+    items: [
+      { text: "WorkBuddy 手册", link: "/bluebook/" },
+      { text: "工作台搭建", link: "/workbench/" },
+      { text: "Skill 技能", link: "/skills/" },
+      { text: "提示词库", link: "/prompts/" },
+      { text: "实践案例", link: "/cases/" },
     ],
   },
 ];
 
 export const siteSidebar: DefaultTheme.Sidebar = {
   ...bluebookSidebar,
+  "/workbuddy/": hubSidebar("WorkBuddy 手册", "/workbuddy/"),
+  "/teacher-assistant/": teacherAssistantSidebar,
+  "/workbench/": hubSidebar("工作台搭建", "/workbench/"),
+  "/skills/": hubSidebar("Skill 技能", "/skills/"),
+  "/prompts/": hubSidebar("提示词库", "/prompts/"),
   "/training/": trainingSidebar,
   "/cases/": casesSidebar,
   "/community/case-contributing": casesSidebar,
