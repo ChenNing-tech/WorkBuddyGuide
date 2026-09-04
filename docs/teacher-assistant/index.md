@@ -22,9 +22,9 @@ outline: deep
 
 ## 下载客户端
 
-[下载教师工作管理助手（百度网盘）](https://pan.baidu.com/s/16CBJ4R_EG5A21-_gBo81xw){target="_blank" rel="noreferrer"}
+[下载教师工作管理助手（百度网盘）](https://pan.baidu.com/s/1tY9bTwoWLzDj0dgmc0KcVQ){target="_blank" rel="noreferrer"}
 
-**提取码：`mtef`**　安装包：`TeacherWorkAssistant_Setup_20260901.exe`
+**提取码：`qau4`**　安装包：`TeacherWorkAssistant_Setup_20260904.exe`
 
 ::: warning 安装前请确认
 请核对安装包文件名与来源。学校设备如由信息部门统一管理，请先遵守校内软件安装规范。
